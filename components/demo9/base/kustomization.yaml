@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: demo9
+  janus-idp.io/tekton: demo9
+  backstage.io/kubernetes-id: demo9
+  backstage.io/kubernetes-namespace: ssm-app9 
+  app.kubernetes.io/part-of: demo9
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
